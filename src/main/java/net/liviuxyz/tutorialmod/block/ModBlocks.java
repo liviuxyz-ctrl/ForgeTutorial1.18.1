@@ -1,6 +1,7 @@
 package net.liviuxyz.tutorialmod.block;
 
 import net.liviuxyz.tutorialmod.TutorialMod;
+import net.liviuxyz.tutorialmod.item.ModCreativeModeTab;
 import net.liviuxyz.tutorialmod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -33,19 +34,19 @@ public class ModBlocks {
     static {
         CITRINE_ORE = registerBlock("citrine_ore",
                 () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                        .strength(9f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
+                        .strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
         DEEPSLATE_CITRINE_ORE = registerBlock("deepslate_citrine_ore",
                 () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                        .strength(15f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
+                        .strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
         NETHERRACK_CITRINE_ORE = registerBlock("netherrack_citrine_ore",
                 () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                        .strength(17f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
+                        .strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_WIP);
         ENDSTONE_CITRINE_ORE = registerBlock("endstone_citrine_ore",
                 () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                        .strength(20f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
+                        .strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_WIP);
         CITRINE_BLOCK = registerBlock("citrine_block",
                 () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                        .strength(30f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
+                        .strength(9f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
     }
 
 
@@ -58,15 +59,15 @@ public class ModBlocks {
     }
 
 
-    private static <T extends Block> void
-        registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
-        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
-    }
-
 //    private static <T extends Block> void
-//    registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
+//        registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
 //        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
 //    }
+
+    private static <T extends Block> void
+    registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
+        ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+    }
 
 
 

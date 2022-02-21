@@ -29,9 +29,9 @@ public class ModItems {
 
     static {
         CITRINE = ITEMS.register("citrine",
-                () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+                () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB)));
         RAW_CITRINE = ITEMS.register("raw_citrine",
-                () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC).fireResistant()));
+                () -> new Item(new Item.Properties().tab(ModCreativeModeTab.TUTORIAL_TAB).fireResistant()));
     }
 
 
